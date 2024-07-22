@@ -14,6 +14,8 @@
 		4313CCC42C4EAA3900B09DB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC32C4EAA3900B09DB7 /* HomeView.swift */; };
 		4313CCC62C4EAA4600B09DB7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC52C4EAA4600B09DB7 /* AccountView.swift */; };
 		4313CCC82C4EAA5100B09DB7 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC72C4EAA5100B09DB7 /* CheckoutView.swift */; };
+		4313CCCA2C4EAE8500B09DB7 /* Dishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC92C4EAE8500B09DB7 /* Dishes.swift */; };
+		4313CCCC2C4EAED400B09DB7 /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCCB2C4EAED400B09DB7 /* DishViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		4313CCC32C4EAA3900B09DB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4313CCC52C4EAA4600B09DB7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		4313CCC72C4EAA5100B09DB7 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		4313CCC92C4EAE8500B09DB7 /* Dishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dishes.swift; sourceTree = "<group>"; };
+		4313CCCB2C4EAED400B09DB7 /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		4313CCC12C4EAA2500B09DB7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4313CCCB2C4EAED400B09DB7 /* DishViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 		4313CCC22C4EAA2C00B09DB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4313CCC92C4EAE8500B09DB7 /* Dishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				4313CCC42C4EAA3900B09DB7 /* HomeView.swift in Sources */,
 				4313CCB52C4EA94A00B09DB7 /* MainView.swift in Sources */,
 				4313CCB32C4EA94A00B09DB7 /* DishDashApp.swift in Sources */,
+				4313CCCC2C4EAED400B09DB7 /* DishViewModel.swift in Sources */,
+				4313CCCA2C4EAE8500B09DB7 /* Dishes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
