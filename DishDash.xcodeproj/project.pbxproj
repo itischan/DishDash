@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4313CCB32C4EA94A00B09DB7 /* DishDashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCB22C4EA94A00B09DB7 /* DishDashApp.swift */; };
-		4313CCB52C4EA94A00B09DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCB42C4EA94A00B09DB7 /* ContentView.swift */; };
+		4313CCB52C4EA94A00B09DB7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCB42C4EA94A00B09DB7 /* MainView.swift */; };
 		4313CCB72C4EA94B00B09DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4313CCB62C4EA94B00B09DB7 /* Assets.xcassets */; };
 		4313CCBA2C4EA94B00B09DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4313CCB92C4EA94B00B09DB7 /* Preview Assets.xcassets */; };
+		4313CCC42C4EAA3900B09DB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC32C4EAA3900B09DB7 /* HomeView.swift */; };
+		4313CCC62C4EAA4600B09DB7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC52C4EAA4600B09DB7 /* AccountView.swift */; };
+		4313CCC82C4EAA5100B09DB7 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313CCC72C4EAA5100B09DB7 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4313CCAF2C4EA94A00B09DB7 /* DishDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4313CCB22C4EA94A00B09DB7 /* DishDashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDashApp.swift; sourceTree = "<group>"; };
-		4313CCB42C4EA94A00B09DB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4313CCB42C4EA94A00B09DB7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4313CCB62C4EA94B00B09DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4313CCB92C4EA94B00B09DB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4313CCC32C4EAA3900B09DB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4313CCC52C4EAA4600B09DB7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		4313CCC72C4EAA5100B09DB7 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		4313CCB12C4EA94A00B09DB7 /* DishDash */ = {
 			isa = PBXGroup;
 			children = (
+				4313CCC22C4EAA2C00B09DB7 /* Models */,
+				4313CCC12C4EAA2500B09DB7 /* ViewModels */,
+				4313CCC02C4EAA1F00B09DB7 /* Views */,
 				4313CCB22C4EA94A00B09DB7 /* DishDashApp.swift */,
-				4313CCB42C4EA94A00B09DB7 /* ContentView.swift */,
+				4313CCB42C4EA94A00B09DB7 /* MainView.swift */,
 				4313CCB62C4EA94B00B09DB7 /* Assets.xcassets */,
 				4313CCB82C4EA94B00B09DB7 /* Preview Content */,
 			);
@@ -65,6 +74,30 @@
 				4313CCB92C4EA94B00B09DB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4313CCC02C4EAA1F00B09DB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4313CCC32C4EAA3900B09DB7 /* HomeView.swift */,
+				4313CCC52C4EAA4600B09DB7 /* AccountView.swift */,
+				4313CCC72C4EAA5100B09DB7 /* CheckoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4313CCC12C4EAA2500B09DB7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4313CCC22C4EAA2C00B09DB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4313CCB52C4EA94A00B09DB7 /* ContentView.swift in Sources */,
+				4313CCC82C4EAA5100B09DB7 /* CheckoutView.swift in Sources */,
+				4313CCC62C4EAA4600B09DB7 /* AccountView.swift in Sources */,
+				4313CCC42C4EAA3900B09DB7 /* HomeView.swift in Sources */,
+				4313CCB52C4EA94A00B09DB7 /* MainView.swift in Sources */,
 				4313CCB32C4EA94A00B09DB7 /* DishDashApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
