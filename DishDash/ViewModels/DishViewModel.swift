@@ -9,5 +9,10 @@ import Foundation
 
 
 class DishViewModel:ObservableObject{
+    @Published var orders : [Dishes] = []
+   
     
+    func getOrders(){
+        
+    }
 }

@@ -18,11 +18,13 @@ struct Dishes: Decodable, Identifiable {
     let protein: Int
     let carbs: Int
 }
-
+struct DishesResponse:Decodable{
+    let request: [Dishes]
+}
 
 struct MockData {
     
-    static let sampleAppetizer = Dishes(id: 0001,
+    static let sampleDishes = Dishes(id: 0001,
                                            name: "Test Appetizer",
                                            description: "This is the description for my appetizer. It's yummy.",
                                            price: 9.99,
@@ -31,7 +33,7 @@ struct MockData {
                                            protein: 99,
                                            carbs: 99)
     
-    static let dishes       = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
+    static let dishes       = [sampleDishes,sampleDishes,sampleDishes,sampleDishes]
     
     static let orderItemOne     = Dishes(id: 0001,
                                            name: "Test Appetizer One",
@@ -62,3 +64,6 @@ struct MockData {
     
     static let orderItems       = [orderItemOne, orderItemTwo, orderItemThree]
 }
+
+
+
