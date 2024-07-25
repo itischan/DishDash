@@ -9,21 +9,38 @@ import SwiftUI
 
 struct HomeView: View {
     @State var dishes: [Dishes] = []
-
+    @State var isShowingDetail = false
+    @State var selectedDish:Dishes?
+    @State var isOrdered = false
     var body: some View {
-        NavigationStack {
-            List(dishes) { dish in
-               layout(selectedDish: dish)
-            }
-            .onAppear {
-                Task {
-                    await loadDishes()
+        ZStack{
+            NavigationStack {
+                List(dishes) { dish in
+                    layout(selectedDish: dish)
+                        .onTapGesture {
+                            selectedDish = dish
+                            isShowingDetail = true
+                            
+                        }
+                    
                 }
+                
+                .onAppear {
+                    Task {
+                        await loadDishes()
+                    }
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Sea of Dishes")
+            }.blur(radius: isShowingDetail ? 10 : 0)
+                .disabled(isShowingDetail)
+            if isShowingDetail{
+                DishDetailView(selectedDish: selectedDish ?? MockData.orderItemOne, isShowingDetail: $isShowingDetail )
+                    
             }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Sea of Dishes")
         }
     }
+    
     
     func loadDishes() async {
         do {
@@ -57,14 +74,16 @@ extension HomeView{
                            ProgressView() // Show an empty view if the image URL is invalid
                     }
                 
-//                Image("asian-flank-steak")
-//                    .resizable()
-//                    .scaledToFill()
-//                    .frame(width: 100, height: 100)
-//                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Text(dish.name)
-                    .font(.headline)
+              
+                VStack {
+                    Text(dish.name)
+                        .font(.headline)
                     .frame(maxWidth: .infinity)
+                    Text("$ \(dish.price,specifier: "%.2f")")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.gray)
+                }
+                
             }
         }
     }
